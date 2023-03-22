@@ -5,7 +5,7 @@ import Link from 'next/link'
 import {useCart} from '../CartContext'
 import {useRouter} from 'next/router'
 import CartModal from './CartModal'
-
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 const Header: React.FC = () => {
 const {cart, totalQuantity} = useCart()
@@ -13,12 +13,12 @@ const [showCart,setShowCart] = useState(false)
 const cartRef = useRef<HTMLDivElement>(null)
 const router = useRouter();
   return (
-    <header className=" pt-6 px-8 flex justify-between items-center">
+    <header className=" pt-6 px-8 flex justify-between items-center max-md:fixed max-md:-top-0 max-md:w-full max-md:left-0 max-md:z-50 max-md:bg-white max-md:shadow-md ">
       <div className="flex items-center">
        <Link href='/'><Image src="/assets/logo.png" alt="The Lab" width={200} height={200} /></Link> 
       </div>
       <nav>
-      <ul className="flex space-x-6">
+      <ul className="flex space-x-6 max-md:hidden">
         <li>
           <Link href="/" className={router.pathname === "/" ? " border-b-2 border-black font-bold" : "text-gray-500 hover:text-gray-900"}>
             Home

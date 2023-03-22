@@ -20,7 +20,7 @@ export const Product: React.FC<ProductProps> = ({
   onAddToCart,
 }) => {
   return (
-    <div className="flex flex-col items-center w-64 h-82 mb-16 ml-5 bg-product bg-shadow transition-all delay-50 hover:-mt-4 cursor-pointer rounded-lg">
+    <div className="flex flex-col items-center w-64 max-md:w-full max-md:ml-0 h-82 mb-16 ml-5 bg-product bg-shadow transition-all delay-50 hover:-mt-4 cursor-pointer rounded-lg">
     <img src={image} alt={name} className="w-40 h-40 object-contain -mt-8" />
     <h3 className="text-center font-bold text-xl ">{name}</h3>
     <hr

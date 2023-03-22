@@ -5,7 +5,7 @@ const Accueil = () => {
     return (
       <>
         <div className="flex justify-center items-center flex-col space-y-6 h-screen">
-          <h1 className="text-5xl font-bold">
+          <h1 className="text-5xl font-bold max-md:text-center">
             Le restaurant du futur à Montpellier
           </h1>
           <p className="text-xl text-gray-400 home_span">

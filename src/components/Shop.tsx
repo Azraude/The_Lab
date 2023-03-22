@@ -32,8 +32,8 @@ const Shop = () => {
   };
 
   return (
-    <div className="flex flex-row w-full mt-10 px-6 ">
-      <div className='w-1/5 bg-white drop-shadow-lg px-2 min-h-full overflow-y-auto overflow-x-hidden rounded-2xl ml-3'>
+    <div className="flex flex-row max-md:flex-col w-full mt-10 px-6 ">
+      <div className='w-1/5 max-md:w-full max-md:pb-2  max-md:mb-10 bg-white drop-shadow-lg px-2 min-h-full overflow-y-auto overflow-x-hidden rounded-2xl ml-3'>
         {
           cart.length === 0 ? (
             <div className=" pl-2 pt-2 text-gray-500 cart ">Votre panier est vide</div>
@@ -96,9 +96,9 @@ const Shop = () => {
      
       </div>
    
-      <div className="flex flex-wrap w-4/5 mr-4">
+      <div className="flex flex-wrap w-4/5 max-md:w-full mr-4 max-md:mr-0 mt-10">
         {products.map((product) => (
-          <div key={product.id} className="w-72">
+          <div key={product.id} className="w-72 max-md:w-full">
             <Product
               name={product.name}
               image={product.image}
