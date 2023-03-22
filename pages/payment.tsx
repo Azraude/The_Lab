@@ -9,7 +9,6 @@ export default function Menu() {
     <CartProvider>
     <div>
       <Header />
-      <Searchbar />
         <Payment />
         <Footer />
     </div>
