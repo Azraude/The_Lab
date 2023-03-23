@@ -3,10 +3,10 @@ import Image from 'next/image';
 import products, { ProductType } from '../../src/data/products';
 import Header from '../../src/components/Header'
 import { useState } from 'react';
-import {useCart} from '../../src/CartContext'
+import { useCart } from '../../src/CartContext'
 import { AiFillStar } from 'react-icons/ai';
 import { FaMinus, FaPlus } from 'react-icons/fa';
-import {AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai"
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai"
 
 const MAX_RATING = 5;
 
@@ -15,21 +15,28 @@ export default function ProductPage() {
   const router = useRouter();
   const { id } = router.query;
 
-  const [product, setProduct] = useState(
-    products.find((product) => product.id === parseInt(id))
+  const [product, setProduct] = useState<ProductType>(
+    products.find((product) => product.id === Number(id)) as ProductType
   );
 
-  const handleAddToCart = (product) => {
+  if (!product) {
+    // Handle the case where the product is not found
+    return (
+      <div>
+        <h1>Product not found</h1>
+      </div>
+    );
+  }
+  const handleAddToCart = (product: ProductType) => {
     addToCart(product);
     console.log(cart)
     console.log(product) // Doesn't work idk why
   };
 
-  const handleQuantityChange = (e) => {
+  const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const quantity = parseInt(e.target.value);
     setProduct((prevProduct) => ({ ...prevProduct, quantity }));
   };
-
 
   const handleIncrementQuantity = () => {
     setProduct((prevProduct) => ({
@@ -43,32 +50,33 @@ export default function ProductPage() {
       quantity: prevProduct.quantity > 1 ? prevProduct.quantity - 1 : 1,
     }));
   };
-  
+
   const handlePrevProduct = () => {
     const index = products.findIndex((product) => product.id === Number(id));
-    const prevProduct = products[index - 1];
+    const prevProduct = products[index - 1] as ProductType;
     if (prevProduct) {
       setProduct(prevProduct);
       router.push(`/product/${prevProduct.id}`);
     } else if (index === 0) {
-      const lastProduct = products[products.length - 1];
+      const lastProduct = products[products.length - 1] as ProductType;
       setProduct(lastProduct);
       router.push(`/product/${lastProduct.id}`);
     }
   };
-  
+
   const handleNextProduct = () => {
     const index = products.findIndex((product) => product.id === Number(id));
-    const nextProduct = products[index + 1];
+    const nextProduct = products[index + 1] as ProductType;
     if (nextProduct) {
       setProduct(nextProduct);
       router.push(`/product/${nextProduct.id}`);
     } else if (index === products.length - 1) {
-      const firstProduct = products[0];
+      const firstProduct = products[0] as ProductType;
       setProduct(firstProduct);
       router.push(`/product/${firstProduct.id}`);
     }
   };
+
 
   return (
     <>
@@ -103,7 +111,7 @@ export default function ProductPage() {
         <button onClick={handleDecrementQuantity} className="text-gray-700 py-1 px-2">
           <FaMinus className="h-4 w-4" />
         </button>
-        <input type="number" min="1" max="10" value={product.quantity} onChange={handleQuantityChange} className="w-20 text-center p-2" style={{webkitAppearance: "none", margin: 0}} />
+        <input type="number" min="1" max="10" value={product.quantity} onChange={handleQuantityChange} className="w-20 text-center p-2"  />
         <button onClick={handleIncrementQuantity} className="text-gray-700 py-1 px-2">
           <FaPlus className="h-4 w-4 mr-4" />
         </button>
