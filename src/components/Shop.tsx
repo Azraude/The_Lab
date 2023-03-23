@@ -66,7 +66,7 @@ const Shop = () => {
             >
               {cart.length === 0 ? (
                 <div className="pl-2 pt-5 text-gray-500 cart ">
-                  Votre panier est vide
+                  Your cart is empty
                 </div>
               ) : (
                 <ul>
@@ -125,7 +125,7 @@ const Shop = () => {
                     <Link href="/payment">
                       <button
                         onClick={handlePaymentClick}
-                        className="bg-[#16C7D2] hover:scale-105 transition ease-linear delay-50 p-4 leading-4 flex justify-center items-center  text-white w-64 rounded-lg "
+                        className="bg-buy hover:scale-105 transition ease-linear delay-50 p-4 leading-4 flex justify-center items-center  text-white w-64 rounded-lg "
                       >
                         Payer Maintenant
                         </button>

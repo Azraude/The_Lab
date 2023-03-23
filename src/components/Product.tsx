@@ -23,7 +23,7 @@ export const Product: React.FC<ProductProps> = ({
   onAddToCart,
 }) => {
   return (
-    <div className="flex flex-col items-center w-64 max-md:w-full border-2 border-[#16C7D2] max-md:ml-0 h-82 mb-16  ml-5 bg-product bg-shadow transition-all delay-50 hover:-mt-4 cursor-pointer rounded-2xl">
+    <div className="flex flex-col items-center w-64 max-md:w-full  max-md:ml-0 h-82 mb-16  ml-5 bg-product bg-shadow transition-all delay-50 hover:-mt-4 cursor-pointer rounded-2xl">
      <Link href="/product/[id]" as={`/product/${id}`}><img src={image} alt={name} className="w-40 h-40 object-contain -mt-8" /></Link>
     <h3 className="text-center font-bold text-xl ">{name}</h3>
     <hr
@@ -45,9 +45,9 @@ export const Product: React.FC<ProductProps> = ({
     </div>
     <button
       onClick={onAddToCart}
-      className="transition delay-150 border-t-2 bg-buy w-full mb-0 pb-5 text-black rounded-b-xl pt-3  "
+      className="transition delay-150 bg-black w-full mb-0 pb-5 text-white rounded-b-xl pt-3  "
     >
-      Ajouter au panier
+      Add to cart
     </button>
   </div>
   

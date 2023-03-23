@@ -14,7 +14,7 @@ const CartModal = () => {
   return (
     <div className="cart-modal bg-white p-4 rounded-lg overflow-y-auto shadow-lg w-64 h-64">
       {cart.length === 0 ? (
-        <div className="pl-2 text-gray-500">Votre panier est vide</div>
+        <div className="pl-2 text-gray-500">Your cart is empty</div>
       ) : (
         <div>
           <ul>
@@ -38,7 +38,7 @@ const CartModal = () => {
             ))}
           </ul>
           <div className="button mt-2 w-full">
-            <Link href='/payment'><button onClick={handlePaymentClick} className="bg-black p-3 leading-4 flex justify-center items-center  text-white w-full rounded-md ">Payer</button> </Link>
+            <Link href='/payment'><button onClick={handlePaymentClick} className="bg-buy p-3 leading-4 flex justify-center items-center  text-white w-full rounded-md ">Payer</button> </Link>
           </div>
         </div>
       )}

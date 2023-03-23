@@ -20,13 +20,26 @@
 }
 
 .bg-shadow:hover{
-  box-shadow: 5px 10px 14px 5px rgba(22, 199, 210, 0.2)
+  box-shadow: 5px 10px 14px 5px rgba(216, 159, 101,0.3)
 }
 
 .bg-buy{
-  background: linear-gradient(123.55deg, #16C7D2 11.74%, #229ED9 87.03%);
+  background: linear-gradient(123.55deg, #d89654 11.74%, #f2b980 87.03%);
+}
+.bg-buy-hover {
+  background: linear-gradient(123.55deg, #d89654 11.74%, #f2b980 87.03%);
+}
+.bg-buy-hover:hover{
+  background: transparent;
+  border : 2px solid ;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 body{
   background-color: #efefef;
 }
+
 

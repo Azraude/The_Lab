@@ -29,7 +29,7 @@ const Searchbar = ({ setFilter }: SearchbarProps) => {
       <div className="w-1/4 flex items-center bg-[#F4F4F4] border shadow rounded-md py-2 px-4 max-md:w-full">
         <input
           type="text"
-          placeholder="Rechercher un plat"
+          placeholder="Search a dish"
           className="w-full bg-[#F4F4F4] focus:outline-none"
           value={searchQuery}
           onChange={handleInputChange}
@@ -49,7 +49,7 @@ const Searchbar = ({ setFilter }: SearchbarProps) => {
         <div className=" ml-4 max-md:w-full max-md:ml-0">
           <button className="shadow flex max-md:mx-auto max-md:mt-2 items-center  hover:scale-105 transition ease-linear delay-50 bg-buy text-white font-semibold py-2 px-4 rounded-md ">
             <FaPlus className="mr-2" onClick={handleAddTable} />
-            Ajouter une table
+            Add a table
           </button>
         </div>
       </div>
