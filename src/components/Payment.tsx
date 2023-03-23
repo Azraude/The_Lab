@@ -6,6 +6,7 @@ import { ProductType } from "../data/products";
 import { FaTrashAlt, FaUsers } from "react-icons/fa";
 import { SiTablecheck } from "react-icons/si";
 import { BiTime } from "react-icons/bi";
+import Image from "next/image";
 
 const uniqueId = Math.floor(Math.random() * 1000);
 const Payment = () => {
@@ -97,7 +98,7 @@ const Payment = () => {
             key={product.id}
           >
             <div className="w-full md:w-1/3 flex items-center ">
-              <img
+              <Image
                 src={product.image}
                 alt=""
                 className="w-16 h-16 rounded mr-4"

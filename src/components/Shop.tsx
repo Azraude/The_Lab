@@ -8,6 +8,7 @@ import Link from 'next/link'
 import router from "next/router";
 import Cookies from 'js-cookie';
 import Searchbar from "./SearchBar";
+import Image from 'next/image';
 
 const Shop = () => {
   const { cart, addToCart, removeFromCart } = useCart();
@@ -76,7 +77,7 @@ const Shop = () => {
                       className={`product flex items-center mb-3 mt-3 py-2 rounded-xl bg-product shadow-md`}
                       style={style}
                     >
-                      <img
+                      <Image
                         src={product.image}
                         alt=""
                         className="w-20 h-20"

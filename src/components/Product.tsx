@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 type ProductProps = {
   id:number;
@@ -24,7 +25,7 @@ export const Product: React.FC<ProductProps> = ({
 }) => {
   return (
     <div className="flex flex-col items-center w-64 max-md:w-full  max-md:ml-0 h-82 mb-16  ml-5 bg-product bg-shadow transition-all delay-50 hover:-mt-4 cursor-pointer rounded-2xl">
-     <Link href="/product/[id]" as={`/product/${id}`}><img src={image} alt={name} className="w-40 h-40 object-contain -mt-8" /></Link>
+     <Link href="/product/[id]" as={`/product/${id}`}><Image src={image} alt={name} className="w-40 h-40 object-contain -mt-8" /></Link>
     <h3 className="text-center font-bold text-xl ">{name}</h3>
     <hr
     className='my-3'

@@ -3,6 +3,7 @@ import {FaTrashAlt} from 'react-icons/fa';
 import Link from 'next/link'
 import router from "next/router";
 import Cookies from 'js-cookie';
+import Image from "next/image";
 
 const CartModal = () => {
   const { cart, removeFromCart } = useCart();
@@ -22,7 +23,7 @@ const CartModal = () => {
               <div className="flex flex-col relative" key={product.id}>
                 <li className="flex items-center justify-between py-2 border-b border-gray-200 ">
                   <div className="product-image mr-4">
-                    <img src={product.image} alt={product.name} className="w-10 h-10 object-contain" />
+                    <Image src={product.image} alt={product.name} className="w-10 h-10 object-contain" />
                   </div>
                   <div className="product-info flex-1">
                     <h3 className="font-bold text-sm">{product.name}</h3>
