@@ -125,7 +125,7 @@ const Shop = () => {
                     <Link href="/payment">
                       <button
                         onClick={handlePaymentClick}
-                        className=" bg-black p-4 leading-4 flex justify-center items-center  text-white w-64 rounded-lg "
+                        className="bg-[#16C7D2] hover:scale-105 transition ease-linear delay-50 p-4 leading-4 flex justify-center items-center  text-white w-64 rounded-lg "
                       >
                         Payer Maintenant
                         </button>
@@ -148,8 +148,10 @@ const Shop = () => {
           {filteredProducts.length > 0 ? (
 
           filteredProducts.map((product) => (
+           
             <div key={product.id} className="w-72 max-md:w-full">
               <Product
+                id={product.id}
                 name={product.name}
                 image={product.image}
                 price={product.price}

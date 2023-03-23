@@ -81,10 +81,6 @@ return (
       </ul>
     </nav>
     <div className="flex items-center space-x-4">
-      <button className="p-2 rounded-full hover:text-gray-700" aria-label="Search">
-        <FaSearch size={18} />
-      </button>
-
       <button
         className="relative p-2 rounded-full hover:text-gray-700"
         onClick={() => setShowCart(!showCart)}

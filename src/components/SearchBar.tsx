@@ -47,8 +47,8 @@ const Searchbar = ({ setFilter }: SearchbarProps) => {
           />
         </div>
         <div className=" ml-4 max-md:w-full max-md:ml-0">
-          <button className="flex max-md:mx-auto max-md:mt-2 items-center bg-black hover:bg-[#151515] text-white font-semibold py-2 px-4 rounded-md ">
-            <FaPlus className="mr-2 shadow" onClick={handleAddTable} />
+          <button className="shadow flex max-md:mx-auto max-md:mt-2 items-center  hover:scale-105 transition ease-linear delay-50 bg-buy text-white font-semibold py-2 px-4 rounded-md ">
+            <FaPlus className="mr-2" onClick={handleAddTable} />
             Ajouter une table
           </button>
         </div>

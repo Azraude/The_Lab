@@ -18,6 +18,14 @@
 .bg-shadow{
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+
+.bg-shadow:hover{
+  box-shadow: 5px 10px 14px 5px rgba(22, 199, 210, 0.2)
+}
+
+.bg-buy{
+  background: linear-gradient(123.55deg, #16C7D2 11.74%, #229ED9 87.03%);
+}
 body{
   background-color: #efefef;
 }

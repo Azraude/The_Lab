@@ -93,7 +93,7 @@ const Payment = () => {
         </div>
         {cart.map((product) => (
           <div
-            className="flex items-center md:flex-row mb-4 mt-4 md:ml-2 max-sm:justify-between"
+            className="flex items-center md:flex-row  mt-4 md:ml-2 max-sm:justify-between"
             key={product.id}
           >
             <div className="w-full md:w-1/3 flex items-center ">
@@ -123,7 +123,7 @@ const Payment = () => {
             </div>
           </div>
         ))}
-      <div className="flex justify-end mt-4">
+      <div className="flex justify-end ">
         <button className="transition-colors ease-in delay-50 hover:bg-[#fb8e8e]  text-gray-800 font-semibold py-3 px-4 rounded shadow  mt-64 w-full bg-[#EC5A5A]" onClick={handleCancelOrder}>Cancel Order</button>
       </div>
     </div>
@@ -138,7 +138,7 @@ const Payment = () => {
         </div>
       
       </div>
-      <button className="bg-black transition-colors delay-50 ease hover:bg-[#151515] text-white font-semibold py-2 px-4 w-full rounded shadow" onClick={handlePayNow}>Pay Now</button>
+      <button className="bg-black  hover:scale-105 transition ease-linear delay-50 text-white font-semibold py-2 px-4 w-full rounded shadow" onClick={handlePayNow}>Pay Now</button>
     </div>
   </div>
 </div>

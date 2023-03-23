@@ -13,6 +13,7 @@ export default function Home() {
         <Accueil />
         <div className="grid grid-cols-3 gap-4 mt-40 pt-24">
           <Product
+            id={1}
             name="Pizza"
             image="assets/product2.png"
             price={10}
@@ -22,6 +23,7 @@ export default function Home() {
             onAddToCart={() => {}}
           />
           <Product
+            id={2}
             name="Pizza"
             image="assets/product2.png"
             price={10}
@@ -31,6 +33,7 @@ export default function Home() {
             onAddToCart={() => {}}
           />
           <Product
+            id={3}
             name="Pizza"
             image="assets/product2.png"
             price={10}
