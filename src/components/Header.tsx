@@ -29,7 +29,7 @@ const headerAnimation = useSpring({
 
 return (
   <animated.header
-    className="pt-6 px-8 flex justify-between items-center max-md:fixed max-md:-top-0 max-md:w-full max-md:left-0 max-md:z-50 max-md:bg-white max-md:shadow-md"
+    className="pt-6 pr-8 flex justify-between items-center max-md:fixed max-md:-top-0 max-md:w-full max-md:left-0 max-md:z-50 max-md:bg-white max-md:shadow-md"
     style={headerAnimation}
   >
     <div className="flex items-center">

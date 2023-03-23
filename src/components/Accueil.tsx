@@ -1,10 +1,23 @@
 import React from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useSpring, animated } from 'react-spring';
+import { useEffect, useState } from 'react';
+
+
 
 const Accueil = () => {
+  const [animateHeader, setAnimateHeader] = useState(false);
+
+const homeAnimation = useSpring({
+  opacity: 1,
+  y: 0,
+  from: { opacity: 0, y: 50 },
+  config: { duration: 500 },
+  });
     return (
       <>
-        <div className="flex justify-center items-center flex-col space-y-6 h-screen">
+      <animated.header className="flex justify-center items-center flex-col space-y-6 h-screen" style={homeAnimation}>
           <h1 className="text-5xl font-bold max-md:text-center">
             The restaurant of the future in Montpellier
           </h1>
@@ -17,7 +30,7 @@ const Accueil = () => {
           >
             Take order
           </Link>
-        </div>
+        </animated.header>
       </>
     );
   };
